@@ -1,4 +1,4 @@
-<h3>Home</h3>
-<% @users.each do |user| %>
-  <p>User: <%=link_to user.name, user %></p>
-<% end %>
+<h3>Welcome to the NadiaTutor - The ultimate math genius producing app... </h3>
+<div class="hero-unit">
+	<h1>You have <%= Ledger.where(user_id:current_user.id).count(:cents)%> cents right now <%= current_user.name %></h1>
+	<h2> Felling fancy? <%= link_to 'Let\'s answer some questions!', new_question_path  %> </h2>

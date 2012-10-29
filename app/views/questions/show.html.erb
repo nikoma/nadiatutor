@@ -1,0 +1,30 @@
+<h1><p id="notice"><%= notice %></p></h1>
+<h1>You now have <%= Ledger.where(user_id:current_user.id).count(:cents) %> Cents </h1>
+
+<p>
+  <b>Number a:</b>
+  <%= @question.number_a %>
+</p>
+
+<p>
+  <b>Number b:</b>
+  <%= @question.number_b %>
+</p>
+
+<p>
+  <b>Correct result:</b>
+  <%= @question.correct_result %>
+</p>
+
+<p>
+  <b>Your result:</b>
+  <%= @question.your_result %>
+</p>
+
+<p>
+  <b>Game:</b>
+  <%= @question.game_id %>
+</p>
+
+
+<h1> <%= link_to 'Give me more questions', new_question_path(@game) %> </h1>

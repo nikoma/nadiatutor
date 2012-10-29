@@ -1,0 +1,23 @@
+<h1>Listing ledgers</h1>
+
+<table>
+  <tr>
+    <th>Cents</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ledgers.each do |ledger| %>
+  <tr>
+    <td><%= ledger.cents %></td>
+    <td><%= link_to 'Show', ledger %></td>
+    <td><%= link_to 'Edit', edit_ledger_path(ledger) %></td>
+    <td><%= link_to 'Destroy', ledger, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ledger', new_ledger_path %>

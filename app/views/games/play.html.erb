@@ -1,0 +1,14 @@
+<h3>Go get 'em tiger!!</h3>
+
+<h1><%= @number_a %> * <%= @number_b %> = </h1>
+<%= form_for @result do |f| %>
+  
+  <%= f.text_field :first_name %><br />
+
+  <%= f.label :last_name %>:
+  <%= f.text_field :last_name %><br />
+
+  <%= f.submit %>
+<% end %>
+	
+	

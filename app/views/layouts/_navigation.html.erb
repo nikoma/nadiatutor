@@ -1,4 +1,4 @@
-<%= link_to "Nadiatutor", root_path, :class => 'brand' %>
+<%= link_to "NadiaTutor", root_path, :class => 'brand' %>
 <ul class="nav">
   <% if user_signed_in? %>
     <li>
@@ -13,7 +13,10 @@
     <li>
     <%= link_to 'Edit account', edit_user_registration_path %>
     </li>
-    <% if current_user.has_role? :admin %>
+<li>    
+<span class="badge badge-success"><%= Ledger.where(user_id:current_user.id).count(:cents)%> cents</span>
+</li>   
+ <% if current_user.has_role? :admin %>
       <li>
       <%= link_to 'Admin', users_path %>
       </li>

@@ -11,7 +11,43 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121027222029) do
+ActiveRecord::Schema.define(:version => 20121028030404) do
+
+  create_table "difficulties", :force => true do |t|
+    t.string   "name"
+    t.integer  "digits"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "games", :force => true do |t|
+    t.integer  "questions"
+    t.integer  "correct"
+    t.integer  "wrong"
+    t.integer  "points"
+    t.integer  "difficulty_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  add_index "games", ["difficulty_id"], :name => "index_games_on_range_id"
+
+  create_table "ledgers", :force => true do |t|
+    t.integer  "cents"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "user_id"
+  end
+
+  create_table "questions", :force => true do |t|
+    t.integer  "number_a"
+    t.integer  "number_b"
+    t.integer  "correct_result"
+    t.integer  "your_result"
+    t.integer  "game_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
 
   create_table "roles", :force => true do |t|
     t.string   "name"

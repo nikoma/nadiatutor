@@ -1,0 +1,29 @@
+
+<p>
+  <b>Questions:</b>
+  <%= @game.questions %>
+</p>
+
+<p>
+  <b>Correct:</b>
+  <%= @game.correct %>
+</p>
+
+<p>
+  <b>Wrong:</b>
+  <%= @game.wrong %>
+</p>
+
+<p>
+  <b>Points:</b>
+  <%= @game.points %>
+</p>
+
+<p>
+  <b>Range:</b>
+  <%= @game.difficulty_id %>
+</p>
+
+<%= link_to 'Play NOW!', new_question_path %> |
+<%= link_to 'Edit', edit_game_path(@game) %> |
+<%= link_to 'Back', games_path %>

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @difficulty.name %>
+</p>
+
+<p>
+  <b>Digits:</b>
+  <%= @difficulty.digits %>
+</p>
+
+
+<%= link_to 'Edit', edit_difficulty_path(@difficulty) %> |
+<%= link_to 'Back', difficulties_path %>

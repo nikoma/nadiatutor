@@ -1,3 +1,10 @@
 @import "bootstrap";
-body { padding-top: 60px; }
+body { padding-top: 60px; 
+margin: 0;
+ background: url('back.jpg');
+ background-size: 1680px 1050px;
+ background-repeat:no-repeat;
+ display: compact;
+ font: 13px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 @import "bootstrap-responsive";
